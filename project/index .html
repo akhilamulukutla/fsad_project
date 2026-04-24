@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Online Bookstore Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Online Bookstore Management</h1>
+
+    <div class="form-card">
+        <h2>Add / Edit Book</h2>
+
+        <input type="hidden" id="bookId">
+
+        <input type="text" id="title" placeholder="Book Title">
+        <input type="text" id="author" placeholder="Author">
+        <input type="number" id="price" placeholder="Price">
+        <input type="text" id="category" placeholder="Category">
+
+        <button id="saveBtn">Save Book</button>
+        <button onclick="clearForm()" class="secondary">Clear</button>
+    </div>
+
+    <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Search by title..." onkeyup="searchBooks()">
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Author</th>
+                <th onclick="sortByPrice()">Price ⬍</th>
+                <th>Category</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="bookTable"></tbody>
+    </table>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
